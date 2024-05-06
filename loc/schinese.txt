@@ -1,6 +1,6 @@
 {
 	"awic_title" : "Assault wave In chat",
-	"awic_desc":"改变广播的信息类型()",
+	"awic_desc":"改变广播的信息类型",
 	"awic_host_msg_choice_title":"房主信息类型",
 	"awic_host_msg_choice_desc":"当你作为房主时",
 	"awic_host_msg_1":"向其他人广播",
