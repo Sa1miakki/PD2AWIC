@@ -1,0 +1,30 @@
+{
+	"awic_title" : "Assault wave In chat",
+	"awic_desc":"Change message type for host or client.",
+	"awic_host_msg_choice_title":"Host msg type",
+	"awic_host_msg_choice_desc":"When you are host ...",
+	"awic_host_msg_1":"Announce",
+	"awic_host_msg_2":"Private",
+        "awic_host_msg_3":"Disable",
+
+        "awic_client_msg_choice_title":"Client msg type",
+        "awic_client_msg_choice_desc":"When you are client ...",
+        "awic_client_msg_1":"Private",
+	"awic_client_msg_2":"Disable",
+
+        "awic_lang_choice_title":"Language",
+        "awic_lang_choice_desc":"Switch Language(need reload lua)",
+        "awic_lang_1":"Game Language",
+	"awic_lang_2":"English",
+        "awic_lang_3":"简体中文",
+
+        "awic_receive_msg":"Assault Wave",
+        "awic_announce_msg":"Assault Wave: ",
+        "awic_advance_msg_1":"This assault has started in advance (",
+        "awic_advance_msg_2":" sec)",
+        "awic_phase_receive_msg":"Assault Phase",
+        "awic_endless_msg":"Assault Phase: Endless",
+        "awic_less_endless_msg":"Endless",
+        "awic_fade_msg":"Assault Phase: Fade",
+        "awic_less_fade_msg":"Fade"
+}

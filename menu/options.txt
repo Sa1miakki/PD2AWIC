@@ -1,0 +1,47 @@
+{
+	"menu_id" : "awic_menu",
+	"parent_menu_id" : "blt_options",
+	"title" : "awic_title",
+	"description":"awic_desc",
+	"back_callback" : "awic_back",
+	"items" : [
+                 {
+			"type" : "multiple_choice",
+			"id" : "awic_lang_choice",
+			"title" : "awic_lang_choice_title",
+			"description" : "awic_lang_choice_desc",
+			"callback" : "awic_lang_choice_callback",
+			"items" : [
+				"awic_lang_1",
+				"awic_lang_2",
+                                "awic_lang_3"
+			],
+			"value" : "lang_choice"
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "awic_host_msg",
+			"title" : "awic_host_msg_choice_title",
+			"description" : "awic_host_msg_choice_desc",
+			"callback" : "awic_host_msg_callback",
+			"items" : [
+				"awic_host_msg_1",
+				"awic_host_msg_2",
+                                "awic_host_msg_3",
+			],
+			"value" : "host_msg_choice"
+		},
+                {
+			"type" : "multiple_choice",
+			"id" : "awic_client_msg_choice",
+			"title" : "awic_client_msg_choice_title",
+			"description" : "awic_client_msg_choice_desc",
+			"callback" : "awic_client_msg_choice_callback",
+			"items" : [
+				"awic_client_msg_1",
+				"awic_client_msg_2"
+			],
+			"value" : "client_msg_choice"
+		}
+	]
+}
