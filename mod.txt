@@ -8,7 +8,7 @@
 		{
 			"identifier" : "pd2_awic",
 			"host" : {
-				"meta" : "https://github.com/Sa1miakki/Assault-wave-in-chat/releases/download/v1.3/meta.json"
+				"meta" : "https://raw.githubusercontent.com/Sa1miakki/PD2AWIC/main/meta.json"
 			}
 		}
 	],
