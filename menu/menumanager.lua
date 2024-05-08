@@ -97,9 +97,10 @@ Hooks:Add("LocalizationManagerPostInit", "AssaultWaveInChat_LocalizationManagerP
 			    return
 		    end
 	    end
+	        loc:load_localization_file(t .. "english.txt")
 	elseif AssaultWaveInChat.settings.lang_choice == 2 then
 		loc:load_localization_file(t .. "english.txt")
 	elseif AssaultWaveInChat.settings.lang_choice == 3 then
-	    loc:load_localization_file(t .. "schinese.txt")
+	        loc:load_localization_file(t .. "schinese.txt")
 	end
 end)
