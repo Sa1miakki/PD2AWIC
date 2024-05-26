@@ -42,6 +42,120 @@
 				"awic_client_msg_2"
 			],
 			"value" : "client_msg_choice"
+		},
+                 {
+    		        "type" : "divider",
+			"title" : "awic_blank",
+    		        "size" : 20
+		},
+                {
+			"type" : "toggle",
+			"id" : "awic_drama_bar_toggle",
+			"title" : "awic_drama_bar_title",
+			"description" : "awic_drama_bar_desc",
+			"callback" : "awic_drama_bar_callback",
+			"value" : "drama_enabled"
+		},
+                  {
+			"type" : "toggle",
+			"id" : "awic_drama_text_toggle",
+			"title" : "awic_drama_text_title",
+			"description" : "awic_drama_text_desc",
+			"callback" : "awic_drama_text_callback",
+			"value" : "text_enabled"
+		},
+                 {
+			"type" : "multiple_choice",
+			"id" : "awic_drama_bar_wh_choice",
+			"title" : "awic_drama_bar_wh_choice_title",
+			"description" : "awic_drama_bar_wh_choice_desc",
+			"callback" : "awic_drama_bar_wh_choice_callback",
+			"items" : [
+				"awic_drama_wh_1",
+				"awic_drama_wh_2"
+			],
+			"value" : "db_wh_choice"
+		},
+                {
+			"type" : "slider",
+			"id" : "awic_drama_bar_length",
+			"title" : "awic_drama_bar_length_title",
+			"description" : "awic_drama_bar_length_desc",
+			"callback" : "awic_drama_bar_length_callback",
+			"value" : "db_bar_length",
+			"default_value" : 756,
+			"min" : 0,
+			"max" : 960,
+			"step" : 1
+		},
+                {
+			"type" : "slider",
+			"id" : "awic_drama_bar_wide",
+			"title" : "awic_drama_bar_wide_title",
+			"description" : "awic_drama_bar_wide_desc",
+			"callback" : "awic_drama_bar_wide_callback",
+			"value" : "db_bar_wide",
+			"default_value" : 8,
+			"min" : 8,
+			"max" : 20,
+			"step" : 1
+		},
+                {
+			"type" : "slider",
+			"id" : "awic_drama_bar_x",
+			"title" : "awic_drama_bar_x_title",
+			"description" : "awic_drama_bar_x_desc",
+			"callback" : "awic_drama_bar_x_callback",
+			"value" : "db_x",
+			"default_value" : 1024,
+			"min" : 0,
+			"max" : 2048,
+			"step" : 1
+		},
+                {
+			"type" : "slider",
+			"id" : "awic_drama_bar_y",
+			"title" : "awic_drama_bar_y_title",
+			"description" : "awic_drama_bar_y_desc",
+			"callback" : "awic_drama_bar_y_callback",
+			"value" : "db_y",
+			"default_value" : 700,
+			"min" : 0,
+			"max" : 750,
+			"step" : 1
+		},
+                {
+    		        "type" : "divider",
+			"title" : "awic_blank",
+    		        "size" : 20
+		},
+                {
+			"type" : "toggle",
+			"id" : "awic_sync_drama_toggle",
+			"title" : "awic_sync_drama_title",
+			"description" : "awic_sync_drama_desc",
+			"callback" : "awic_sync_drama_callback",
+			"value" : "sync_enabled"
+		},
+                {
+			"type" : "button",
+			"id" : "awic_default",
+			"title" : "awic_default_title",
+			"description" : "awic_default_desc",
+			"callback" : "awic_default_callback"
+		},
+                {
+			"type" : "button",
+			"id" : "awic_default_vert",
+			"title" : "awic_default_vert_title",
+			"description" : "awic_default_vert_desc",
+			"callback" : "awic_default_vert_callback"
 		}
+                
+
+
+
+
+
 	]
 }

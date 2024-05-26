@@ -2,10 +2,17 @@ _G.AssaultWaveInChat = AssaultWaveInChat or {}
 AssaultWaveInChat.path = ModPath
 AssaultWaveInChat.save_path = SavePath .. "assaultwaveinchat.txt"
 AssaultWaveInChat.settings = {
+    drama_enabled = true,
+	text_enabled = true,
+	sync_enabled = true,
     host_msg_choice = 1,
 	client_msg_choice = 1,
-	lang_choice = 1
-	
+	lang_choice = 1,
+	db_wh_choice = 1, 
+	db_x = 1024,
+	db_y = 700,
+	db_bar_length = 756,
+	db_bar_wide = 8
 }
 
 function AssaultWaveInChat:Save()
@@ -82,9 +89,94 @@ Hooks:Add("MenuManagerInitialize", "AssaultWaveInChat_MenuManagerInitialize", fu
 		AssaultWaveInChat:Save()
 	end
 	
+	MenuCallbackHandler.awic_drama_bar_callback = function(self,item) 
+		local value = item:value() == "on"
+		AssaultWaveInChat.settings.drama_enabled = value 
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_text_callback = function(self,item) 
+		local value = item:value() == "on"
+		AssaultWaveInChat.settings.text_enabled = value 
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_sync_drama_callback = function(self,item) 
+		local value = item:value() == "on"
+		AssaultWaveInChat.settings.sync_enabled = value 
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_bar_wh_choice_callback = function(self,item) 
+		local value = tonumber(item:value())
+		AssaultWaveInChat.settings.db_wh_choice = value
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_bar_length_callback = function(self,item) 
+		local value = tonumber(item:value())
+		AssaultWaveInChat.settings.db_bar_length = value
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_bar_wide_callback = function(self,item) 
+		local value = tonumber(item:value())
+		AssaultWaveInChat.settings.db_bar_wide = value
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_bar_x_callback = function(self,item) 
+		local value = tonumber(item:value())
+		AssaultWaveInChat.settings.db_x = value
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_drama_bar_y_callback = function(self,item) 
+		local value = tonumber(item:value())
+		AssaultWaveInChat.settings.db_y = value
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_default_callback = function(self)
+		AssaultWaveInChat.settings = {
+        drama_enabled = true,
+	    text_enabled = true,
+		sync_enabled = true,
+        host_msg_choice = 1,
+	    client_msg_choice = 1,
+	    lang_choice = 1,
+	    db_wh_choice = 1, 
+	    db_x = 1024,
+	    db_y = 700,
+	    db_bar_length = 756,
+	    db_bar_wide = 8
+        }
+		AssaultWaveInChat:Save()
+	end
+	
+	MenuCallbackHandler.awic_default_vert_callback = function(self)
+		AssaultWaveInChat.settings = {
+        drama_enabled = true,
+	    text_enabled = true,
+		sync_enabled = true,
+        host_msg_choice = 1,
+	    client_msg_choice = 1,
+	    lang_choice = 1,
+	    db_wh_choice = 2, 
+	    db_x = 2024,
+	    db_y = 478,
+	    db_bar_length = 256,
+	    db_bar_wide = 8
+        }
+		AssaultWaveInChat:Save()
+	end
+	
 	AssaultWaveInChat:Load()
 	MenuHelper:LoadFromJsonFile(AssaultWaveInChat.path .. "menu/options.txt", AssaultWaveInChat, AssaultWaveInChat.settings)
 end)
+
+
+
 
 Hooks:Add("LocalizationManagerPostInit", "AssaultWaveInChat_LocalizationManagerPostInit", function(loc)
 	AssaultWaveInChat:Load()

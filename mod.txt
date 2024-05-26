@@ -1,8 +1,8 @@
 {
     "name" : "Assault wave in chat",
-    "description" : "Assault wave in chat(SydneyHUD Standalone)",
-    "author" : "SydneyMOD/Sa1miakki",
-    "version" : "1.4",
+    "description" : "Assault wave in chat(SydneyHUD Standalone) + Display current drama(code by LR_Daring)",
+    "author" : "SydneyMOD/Sa1miakki/LR_Daring",
+    "version" : "1.5",
     "blt_version" : 2,
     "updates" : [
 		{
@@ -12,9 +12,15 @@
 			}
 		}
 	],
+     "persist_scripts" :
+	[
+		{"global" : "SyncDrama", "script_path" : "lua/sync.lua"}
+	],
     "hooks":
      [  
             {"hook_id":"lib/managers/hudmanager", "script_path":"lua/hudmanager.lua"},
+
+            {"hook_id":"lib/managers/hudmanager", "script_path":"lua/drama.lua"},
 
             {"hook_id":"lib/network/handlers/unitnetworkhandler", "script_path":"lua/unitnetworkhandler.lua" },
 
